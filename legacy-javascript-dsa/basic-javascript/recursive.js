@@ -1,11 +1,9 @@
 function countdown(n) {
-  const newArray = [];
 	if (n < 1) {
 		return [];
 	} else {
-    console.log('running');
-		newArray.push(n);
-		countdown(n - 1);
+		const newArray = countdown(n - 1);
+		newArray.unshift(n);
 		return newArray;
 	}
 }
